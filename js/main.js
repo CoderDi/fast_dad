@@ -13,10 +13,10 @@ $(document).ready(function(){
   });
 
   $(".butter").click(function(){
-    
+    $(".menu__list").addClass("active");
   });
   $(".menu-close").click(function(){
-    
+    $(".menu__list").removeClass("active");
   });
 
   
