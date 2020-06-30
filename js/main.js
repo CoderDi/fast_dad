@@ -1,8 +1,40 @@
 $(document).ready(function(){
+  var min = 5,
+    sec = 0;
+  
+  setTimeout(function(){
+    $(".popup-block").hide();
+    $("#popup-banner").show();
+    $(".popup").addClass("popup--show");
+    var interval = setInterval(function() {
+      sec--;
+      if (sec == -1) {
+        sec = 59;
+        min--;
+        if (min == -1) {
+          min = 0;
+          clearInterval(interval);
+          return;
+        }
+      }
+      if (sec > 9) {
+        $(".seconds").text(sec);
+      } else {
+        $(".seconds").text("0" + sec);
+      }
+      if (min > 9) {
+        $(".minutes").text(min);
+      } else {
+        $(".minutes").text("0" + min);
+      }  
+    }, 1000);
+
+  }, 2000000);
+  
 
   $(".js-getcall").click(function(){
     $(".popup-block").hide();
-    $("#popup-block").show();
+    $("#popup-block-call").show();
     $(".popup").addClass("popup--show");
   });
   $(".popup-close").click(function(){

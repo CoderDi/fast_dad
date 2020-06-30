@@ -1,20 +1,17 @@
 <?php
-
 $method = $_SERVER['REQUEST_METHOD'];
-
 //Script Foreach
 $c = true;
 if ( $method === 'POST' ) {
-
-	$project_name = "ООО Капитал | Заявка с сайта";
-	$admin_email  = "demon101k@gmail.com";
+	$project_name = trim($_POST["project_name"]);
+	$admin_email  = trim($_POST["admin_email"]);
 	$form_subject = trim($_POST["form_subject"]);
-
 	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			if ($key == "Name") $key = "Имя";
-			if ($key == "Phone") $key = "Телефон";
-			if ($key == "Message") $key = "Сообщение";
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "g-recaptcha-response" ) {
+			if ($key == "name") $key = "Имя";
+			if ($key == "phone") $key = "Телефон";
+			if ($key == "message") $key = "Сообщение";
+			if ($key == "l-quest") $key = "Ответ";
 			$message .= "
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>

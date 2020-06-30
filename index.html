@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -39,19 +40,19 @@
       </div>
     </header>
 
-    <!-- <section class="banner">
-      <img src="images/banner.png" alt="" class="banner-img">
+    <section class="banner">
+      <img src="images/banner.jpg" alt="" class="banner-img">
       <img src="images/mobile-banner.jpg" alt="" class="banner-img-mobile">
       <div class="banner__content">
         <div class="wrapper banner__wrapper">
           <img src="images/banner-title.png" alt="" class="banner-title">
           <div class="banner-subtitle">СПОРТ КЛУБ</div>
-          <span class="banner__btn">ЗАПИШИСЬ <br>
+          <span class="banner__btn js-getcall">ЗАПИШИСЬ <br>
             НА БЕСПЛАТНУЮ
             ТРЕНИРОВКУ</span>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <section class="fast">
       <div class="wrapper">
@@ -75,13 +76,23 @@
       </div>
     </section>
 
-    <!-- <section class="trener">
+    <section class="trener">
       <div class="wrapper">
-        <div class="trener-plash flex">
+        <div class="trener-top-mobile">
+          <div class="trener-top">
+            <strong class="trener-name">АРКАДИЙ ПАВЛОВИЧ МЕНЬШИКОВ</strong>
+            <span class="trener-sub">Российский биатлонист, <br> чемпион России по биатлону. Мастер спорта России.</span>
+          </div>
           <span class="trener-border border-title">КТО Я?</span>
-          <div class="trener-img"><img src="images/trener.png" alt=""></div>
+        </div>
+        <div class="trener-plash flex">
+          <span class="trener-border border-title trener-border-desktop">КТО Я?</span>
+          <div class="trener-img">
+            <img src="images/mobile-trainer.jpg" alt="" class="trener-img-desktop">
+            <img src="images/mobile-trainer.jpg" alt="" class="trener-img-mobile">
+          </div>
           <div class="trener-content">
-            <div class="trener-top">
+            <div class="trener-top trener-top-desktop">
               <strong class="trener-name">АРКАДИЙ ПАВЛОВИЧ МЕНЬШИКОВ</strong>
               <span class="trener-sub">Российский биатлонист, <br> чемпион России по биатлону. Мастер спорта России.</span>
             </div>
@@ -111,9 +122,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="direction">
+    <section class="direction">
       <div class="wrapper">
         <h2 class="fast-title border-title direction-title">НАПРАВЛЕНИЯ</h2>
         <div class="direction-plash biatlon">
@@ -147,9 +158,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="sale">
+    <section class="sale">
       <div class="wrapper sale-wrapper">
         <div class="sale-plash">
           <div class="sale-img"><img src="images/family.jpg" alt=""></div>
@@ -157,14 +168,20 @@
             <span class="sale-green">ХОТИТЕ ТРЕНИРОВАТЬСЯ ВСЕЙ СЕМЬЕЙ? </span>
             <strong class="sale-title">АКЦИЯ!</strong>
             <div class="sale-content-block">
-              <span class="sale-border">3</span>
-              АБОНЕМЕНТА СО СКИДКОЙ 
-              <span class="sale-border">20%</span>
+              <span class="sale-border sale-border1">3</span>
+              <span class="sale-border-mobile"></span>
+              АБОНЕМЕНТА <br> СО СКИДКОЙ 
+              <span class="sale-border sale-border2">20%</span>
             </div>
             <form class="sale-form">
               <div class="sale-form-inputs">
-                <input type="text" class="sale-input" placeholder="ИМЯ" required>
-                <input type="tel" class="sale-input" placeholder="ТЕЛЕФОН" required>
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Быстрый папа">
+                <input type="hidden" name="admin_email" value="demon101k@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка с сайта">
+          
+                <input type="text" name="name" class="sale-input" placeholder="ИМЯ" required>
+                <input type="tel" name="phone" class="sale-input" placeholder="ТЕЛЕФОН" required>
                 <input type="submit" value="ОСТАВИТЬ ЗАЯВКУ" class="sale-submit">
               </div>
               <span class="sale-form-date">(акция действует до 31.08.2020)</span>
@@ -172,9 +189,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="map">
+    <section class="map">
       <div class="wrapper sale-wrapper">
         <div class="map-flex flex">
           <div class="map-block"><img src="images/map.jpg" alt=""></div>
@@ -198,19 +215,29 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="quest">
+    <section class="quest">
       <div class="wrapper sale-wrapper">
         <div class="quest-plash">
           <form class="quest-form">
-            <div class="quest-block">
-              <strong class="quest-title">ОТВЕТЬ НА ВОПРОСЫ <br>
+            <strong class="quest-title quest-title-mobile">ОТВЕТЬ НА ВОПРОСЫ <br>
+              И ПОЛУЧИ СКИДКУ <span>50%</span> 
+              НА ИНДИВИДУАЛЬНОЕ ЗАНЯТИЕ <br>
+              И <span>100%</span> НА ГРУППОВОЕ </strong>
+            <div class="quest-block quest-block--left">
+              <strong class="quest-title quest-title-desktop">ОТВЕТЬ НА ВОПРОСЫ <br>
                 И ПОЛУЧИ СКИДКУ <span>50%</span> 
                 НА ИНДИВИДУАЛЬНОЕ ЗАНЯТИЕ <br>
                 И <span>100%</span> НА ГРУППОВОЕ </strong>
-              <input type="text" class="quest-input" placeholder="ИМЯ" required>
-              <input type="tel" class="quest-input" placeholder="ТЕЛЕФОН" required>
+              
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Быстрый папа">
+              <input type="hidden" name="admin_email" value="demon101k@gmail.com">
+              <input type="hidden" name="form_subject" value="Заявка с сайта">
+          
+              <input type="text" name="name" class="quest-input" placeholder="ИМЯ" required>
+              <input type="tel" name="phone" class="quest-input" placeholder="ТЕЛЕФОН" required>
               <input type="submit" value="ОСТАВИТЬ ЗАЯВКУ" class="quest-submit">
             </div>
 
@@ -223,9 +250,9 @@
           </form>
         </div>
       </div>
-    </section> -->
+    </section>
     
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="wrapper footer-wrapper">
         <strong class="footer-title">КОНТАКТЫ</strong>
         <div class="footer-contacts">
@@ -241,7 +268,8 @@
 
         <span class="copyright">Спортивный клуб «Быстрый папа»</span>
       </div>
-    </footer> -->
+    </footer>
+  
   </div>
   
 
@@ -250,8 +278,95 @@
     <div class="popup-content">
       <a class="popup-close"></a>
 
-      <div class="popup-block" id="popup-block">
-        
+      <div class="popup-block popup-block--call" id="popup-block-call">
+        <div class="popup-block-container">
+          <div class="popup-block-left">
+            <strong class="popup-block--call__title">ЗАПИШИСЬ <br>
+              НА БЕСПЛАТНУЮ
+              ТРЕНИРОВКУ</strong>
+            <span class="popup-block--call__text">
+              Позвоните по номеру
+              <a href="tel:8 999 888 77 66">8 999 888 77 66</a>
+              или свяжитесь с нами <br> в WatsApp или InstaGram
+            </span>
+            <div class="popup-socials">
+              <a href="" class="footer-socials__link footer-socials__link--whatsapp"></a>
+              <a href="" class="footer-socials__link footer-socials__link--instagram"></a>
+            </div>
+          </div>
+
+          <div class="popup-block-right popup-block-right--call">
+            <form class="popup-call">
+              <strong class="popup-block--call__title">ЗАПИШИСЬ <br>
+                НА БЕСПЛАТНУЮ
+                ТРЕНИРОВКУ</strong>
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Быстрый папа">
+              <input type="hidden" name="admin_email" value="demon101k@gmail.com">
+              <input type="hidden" name="form_subject" value="Заявка с сайта">
+          
+              <input type="text" name="name" class="popup-call__input" required placeholder="ИМЯ">
+              <input type="tel" name="phone" class="popup-call__input" required placeholder="ТЕЛЕФОН">
+              <textarea name="message" class="popup-call__input popup-call__textarea" placeholder="КОММЕНТАРИИ"></textarea>
+              <label class="popup-call__check">
+                <input type="checkbox" name="robot">
+                <span class="popup-call__check_custom"></span>
+                <span class="popup-call__check_text">Я не робот</span>
+              </label>
+              <label class="popup-call__check">
+                <input type="checkbox" name="politic">
+                <span class="popup-call__check_custom"></span>
+                <span class="popup-call__check_text">Согласен на обработку
+                  персональных данных</span>
+              </label>
+              <input type="submit" value="ОТПРАВИТЬ" class="popup-call__submit">
+            </form>
+          </div>
+        </div>        
+      </div>
+
+      <div class="popup-block popup-block-banner" id="popup-banner">
+        <div class="popup-block-container popup-block-container-banner">
+          <div class="popup-block-left">
+            <strong class="popup-block-banner__title">АКЦИЯ!</strong>
+            <span class="popup-block-banner__text">ОСТАВЬ ЗАЯВКУ
+              ПРЯМО СЕЙЧАС
+              И ПОЛУЧИ КУПОН
+              НА <span>500</span> РУБЛЕЙ 
+              В ПОДАРОК!</span>
+          </div>
+
+          <div class="popup-block-right">
+            <form class="popup-call">
+              <div class="popup-timer">
+                <span class="popup-timer_title">До конца <br> акции осталось:</span>
+                <div id="timer" class="timer">
+                  <ul class="countdown">
+                    <li>
+                      <span class="hours">00</span>
+                    </li>
+                    <li class="seperator">:</li>
+                    <li>
+                      <span class="minutes">05</span>
+                    </li>
+                    <li class="seperator">:</li>
+                    <li>
+                      <span class="seconds">00</span>
+                    </li>
+                </ul>
+                </div>
+              </div>
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Быстрый папа">
+              <input type="hidden" name="admin_email" value="demon101k@gmail.com">
+              <input type="hidden" name="form_subject" value="Заявка с сайта">
+
+              <input type="text" name="name" class="popup-call__input" required placeholder="ИМЯ">
+              <input type="tel" name="phone" class="popup-call__input" required placeholder="ТЕЛЕФОН">
+              <input type="submit" value="ОСТАВИТЬ ЗАЯВКУ" class="popup-call__submit">
+            </form>
+          </div>
+        </div>         
       </div>
     </div>
   </div> 
