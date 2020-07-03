@@ -7,7 +7,7 @@ if ( $method === 'POST' ) {
 	$admin_email  = trim($_POST["admin_email"]);
 	$form_subject = trim($_POST["form_subject"]);
 	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "g-recaptcha-response" ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "robot" && $key != "politic" ) {
 			if ($key == "name") $key = "Имя";
 			if ($key == "phone") $key = "Телефон";
 			if ($key == "message") $key = "Сообщение";
