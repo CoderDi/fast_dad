@@ -748,7 +748,7 @@ input::placeholder { color: #fff; opacity: 1; }
   width: calc(50% - 60px);
   border-top: 3px solid #0000FB;
   border-bottom: 3px solid #0000FB;
-  padding: 25px 0 40px;
+  padding: 25px 0 60px;
 }
 .map-address {
   margin-bottom: 25px;
