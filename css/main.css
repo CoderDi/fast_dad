@@ -85,6 +85,13 @@ body {
 .header__wrapper {
   height: 140px;
 }
+.header-city {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #A3DE00;
+}
 .header-contacts {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -794,6 +801,13 @@ input::placeholder { color: #fff; opacity: 1; }
   display: block;
   text-align: center;
   color: #fff;
+}
+.copyright strong {
+  color: #A3DE00;
+  display: block;
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: normal;
 }
 .footer-contacts {
   display: -webkit-box;
@@ -1705,6 +1719,9 @@ textarea.popup-call__textarea::placeholder { color: #fff; opacity: 1; }
 }
 
 @media screen and (max-width: 768px) {
+  .header-city {
+    font-size: 14px;
+  }
   .banner__wrapper strong {
     max-width: 200px;
     text-align: center;
@@ -1944,6 +1961,9 @@ textarea.popup-call__textarea::placeholder { color: #fff; opacity: 1; }
     margin-bottom: 30px;
   }
   .copyright {
+    font-size: 12px;
+  }
+  .copyright strong {
     font-size: 12px;
   }
   .footer-title::after {
@@ -2234,6 +2254,9 @@ textarea.popup-call__textarea::placeholder { color: #fff; opacity: 1; }
 }
 
 @media screen and (max-width: 500px) {
+  .header-city {
+    display: none;
+  }
   .sale-plash,
   .quest-plash {
     max-width: 240px;
